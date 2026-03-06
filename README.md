@@ -1,6 +1,10 @@
 # Zamri Portfolio (Astro)
 
-A static multi-page portfolio built with Astro, focused on WordPress and WooCommerce systems:
+Personal portfolio website built with Astro and deployed via GitHub Pages.
+
+Repository: `https://github.com/abahumar/zamrii`
+
+## Pages Included
 
 - Home
 - About
@@ -9,74 +13,83 @@ A static multi-page portfolio built with Astro, focused on WordPress and WooComm
 - Blog
 - Contact
 
-## Edit Before Publishing
+## Tech Stack
 
-Update these placeholders:
+- Astro 5
+- Static output (`dist/`)
+- GitHub Actions for deployment
+- GitHub Pages hosting
 
-- `src/pages/contact.astro`: email, WhatsApp, Formspree endpoint
-- `src/pages/index.astro`: `data-user="your-github-username"` for repository feed
-- `public/robots.txt` and `public/sitemap.xml`: replace `your-domain.com`
-- Optional: brand name/domain on all pages
+## Local Development
 
-## Install
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Local Development
+Start dev server:
 
 ```bash
 npm run dev
 ```
 
-Then open the local URL shown by Astro (usually `http://localhost:4321`).
-
-## Build For Production
+Build for production:
 
 ```bash
 npm run build
 ```
 
-Build output is generated in `dist/`.
-
-## Preview Production Build
+Preview production build:
 
 ```bash
 npm run preview
 ```
 
-## Deploy to GitHub Pages (Automatic)
+## Deployment (GitHub Pages)
 
-This repo already includes `.github/workflows/deploy.yml`.
+This project is preconfigured for automatic deployment with:
 
-1. Push this project to a GitHub repo.
-2. In GitHub, go to `Settings` -> `Pages`.
-3. Under `Build and deployment`, select `Source: GitHub Actions`.
-4. Push to `main` branch.
-5. Wait for workflow `Deploy static site to GitHub Pages` to finish.
+- `.github/workflows/deploy.yml`
+- `astro.config.mjs` (auto base path handling in GitHub Actions)
 
-Your live URL will be:
+### One-time GitHub setup
 
-- `https://<your-username>.github.io/<repo-name>/`
+1. Open your repository on GitHub.
+2. Go to `Settings` -> `Pages`.
+3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
 
-Notes:
+### Publish flow
 
-- Astro config auto-sets the correct base path for project pages in GitHub Actions.
-- For user/organization pages (`<username>.github.io` repo), it uses `/` as base.
+1. Push code to `main`.
+2. Open `Actions` tab.
+3. Wait for `Deploy static site to GitHub Pages` to finish.
+4. Open your live URL.
 
-## Optional: Custom Domain
+Live URL for this project:
 
-If you use a custom domain:
+- `https://abahumar.github.io/zamrii/`
 
-1. Add DNS records from your domain provider to GitHub Pages.
-2. Add a `CNAME` file in repo root with your domain (example: `markzack.dev`).
+Reference format:
+
+- Project Pages repo: `https://<username>.github.io/<repo-name>/`
+- User Pages repo (`<username>.github.io`): `https://<username>.github.io/`
+
+## Content To Update Before Going Live
+
+- `src/pages/contact.astro`: email, WhatsApp link, Formspree endpoint
+- `src/pages/index.astro`: update GitHub username in repo feed attribute
+- `public/robots.txt`: replace placeholder domain
+- `public/sitemap.xml`: replace placeholder domain
+
+## Optional Custom Domain
+
+1. Configure DNS records with your domain provider.
+2. Add a `CNAME` file at project root containing your domain.
 3. Set the same domain in `Settings` -> `Pages`.
 
-## Suggested Content Improvements
+## Troubleshooting
 
-1. Add metrics to each case study (example: "Reduced order handling time by 45%.")
-2. Add 1-2 screenshots or architecture diagrams per portfolio project.
-3. Replace testimonial placeholders with real names/companies when possible.
-4. Publish at least 3 blog posts in the first week for SEO traction.
-5. Add schema markup (`Person`, `Service`) for richer search results.
+- If deployment does not run, confirm workflow trigger branch is `main`.
+- If styles or assets are broken, verify repository name and Pages URL path.
+- If Pages shows old content, rerun the latest workflow from the `Actions` tab.
