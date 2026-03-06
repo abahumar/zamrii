@@ -153,6 +153,12 @@ img {
   color: #111;
 }
 
+.site-nav a.btn-primary,
+.site-nav a.btn-primary:hover,
+.site-nav a.btn-primary.active {
+  color: #111;
+}
+
 .btn-ghost {
   border-color: var(--line);
   color: var(--text);
