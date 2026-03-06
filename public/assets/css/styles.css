@@ -153,23 +153,11 @@ img {
   color: #111;
 }
 
-.site-nav a.btn-whatsapp,
-.site-nav a.btn-whatsapp:hover,
-.site-nav a.btn-whatsapp:active,
-.site-nav a.btn-whatsapp:visited {
-  color: #000;
-}
-
-.btn-whatsapp svg {
-  flex: 0 0 auto;
-}
-
 .btn-ghost {
   border-color: var(--line);
   color: var(--text);
   background: transparent;
 }
-
 
 .hero {
   padding: 76px 0 56px;

@@ -6,6 +6,9 @@ interface Props {
 }
 
 const { title, description, keywords } = Astro.props;
+const siteUrl = "https://zamrii.com";
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const ogImageUrl = `${siteUrl}/assets/images/og-image.jpg`;
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -28,6 +31,18 @@ const isActive = (href: string) => {
     <title>{title}</title>
     <meta name="description" content={description} />
     {keywords && <meta name="keywords" content={keywords} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="zamrii" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content="Zamrii logo centered on yellow background" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -60,14 +75,7 @@ const isActive = (href: string) => {
             ))
           }
           <div class="nav-ctas">
-            <a class="btn btn-primary btn-whatsapp" href="https://wa.me/60179721691" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path d="M20 11.5C20 16.1944 16.1944 20 11.5 20C10.0767 20 8.73508 19.6507 7.55677 19.0338L4 20L4.97716 16.5782C4.35565 15.3552 4 13.9685 4 12.5C4 7.80558 7.80558 4 12.5 4C17.1944 4 21 7.80558 21 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M9.2 10.2C9.2 12.6 11.4 14.8 13.8 14.8H14.3C14.6 14.8 14.9 14.6 15.1 14.3L15.6 13.6C15.7 13.4 15.7 13.2 15.6 13L15 12.2C14.9 12 14.7 11.9 14.5 12L13.8 12.3C13.4 12.5 13 12.4 12.7 12.1L11.9 11.3C11.6 11 11.5 10.6 11.7 10.2L12 9.5C12.1 9.3 12 9.1 11.8 9L11 8.4C10.8 8.3 10.6 8.3 10.4 8.4L9.7 8.9C9.4 9.1 9.2 9.4 9.2 9.7V10.2Z" fill="currentColor"/>
-              </svg>
-              <span>WhatsApp</span>
-            </a>
-            <a class="btn btn-ghost" href="mailto:mark.zack06@gmail.com">Email</a>
+            <a class="btn btn-primary" href="mailto:mark.zack06@gmail.com">Email</a>
           </div>
         </nav>
       </div>

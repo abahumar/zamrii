@@ -107,7 +107,8 @@ document.addEventListener("click", (event) => {
   if (typeof window.gtag !== "function") return;
 
   const buttonLabel = getButtonLabel(clickedButton);
-  const href = clickedButton instanceof HTMLAnchorElement ? clickedButton.href : "";
+  const href =
+    clickedButton instanceof HTMLAnchorElement ? clickedButton.href : "";
 
   window.gtag("event", "button_click", {
     event_category: "engagement",

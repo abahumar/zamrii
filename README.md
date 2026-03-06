@@ -77,7 +77,7 @@ Reference format:
 
 ## Content To Update Before Going Live
 
-- `src/pages/contact.astro`: email, WhatsApp link, Formspree endpoint
+- `src/pages/contact.astro`: email details and Formspree endpoint
 - `src/pages/index.astro`: update GitHub username in repo feed attribute
 - `public/robots.txt`: replace placeholder domain
 - `public/sitemap.xml`: replace placeholder domain
