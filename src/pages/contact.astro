@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact | Zamri Dev"
+  description="Contact Zamri for custom WooCommerce functionality, order automation, performance improvements, and system integrations."
+>
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <p class="kicker">Let's Work Together</p>
+        <h1>Let's Build Your Next System</h1>
+        <p>If your WordPress or WooCommerce store needs custom functionality, automation, performance improvements, or integrations, let's discuss your project.</p>
+      </div>
+    </section>
+
+    <section class="page-bento">
+      <div class="container bento-grid">
+        <div class="bento-card bento-half reveal">
+          <p class="bento-label">Project Fit</p>
+          <h2>If Your Store Needs</h2>
+          <ul class="mini-list" style="margin-bottom: 16px;">
+            <li>Custom functionality beyond existing plugins</li>
+            <li>Automation for order or product workflows</li>
+            <li>Performance and speed improvements</li>
+            <li>Integration with external systems</li>
+          </ul>
+          <p class="bento-label">Contact</p>
+          <div class="contact-list">
+            <article class="contact-item">
+            <h2>Email</h2>
+            <p><a href="mailto:mark.zack06@gmail.com">mark.zack06@gmail.com</a></p>
+            </article>
+            <article class="contact-item">
+            <h2>WhatsApp</h2>
+            <p><a href="https://wa.me/60179721691" target="_blank" rel="noreferrer">https://wa.me/60179721691</a></p>
+            </article>
+            <article class="contact-item">
+            <h2>Freelance Profiles</h2>
+            <p>Add your Upwork or Freelancer link here.</p>
+            </article>
+          </div>
+        </div>
+
+        <form class="form bento-card bento-half reveal" action="https://formspree.io/f/your-form-id" method="POST">
+          <p class="bento-label">Form</p>
+          <h2>Tell Me About Your Project</h2>
+          <div class="form-grid">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+          </div>
+          <div style="margin-top: 12px;">
+            <label for="message">Project Description</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div style="margin-top: 12px;">
+            <button class="btn btn-primary" type="submit">Start a Project</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Portfolio | Zamri Dev"
+  description="WooCommerce case studies covering multi-store order sync, product explorer systems, and performance optimization outcomes."
+>
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <p class="kicker">Selected Work</p>
+        <h1>WooCommerce Systems Case Studies</h1>
+        <p>Problem-first implementation work with measurable outcomes.</p>
+      </div>
+    </section>
+
+    <section class="page-bento">
+      <div class="container bento-grid">
+        <article class="bento-card bento-half reveal">
+          <p class="bento-label">Case Study</p>
+          <h2>1. Multi-Store WooCommerce Order Sync</h2>
+          <p><strong>Problem:</strong> Client operated multiple stores and needed centralized order management.</p>
+          <p><strong>Solution:</strong> Built a custom plugin that syncs orders, auto-creates missing products, preserves metadata, and prevents duplicates.</p>
+          <p><strong>Technical Implementation:</strong> WooCommerce REST API, custom background jobs, product auto-creation logic, order metadata mapping.</p>
+          <ul>
+            <li><strong>Result:</strong> Centralized order tracking</li>
+            <li><strong>Result:</strong> Reduced manual reconciliation</li>
+            <li><strong>Result:</strong> Scalable to additional stores</li>
+          </ul>
+        </article>
+
+        <article class="bento-card bento-half reveal">
+          <p class="bento-label">Case Study</p>
+          <h2>2. Custom WooCommerce Product Explorer</h2>
+          <p><strong>Problem:</strong> The default WooCommerce archive could not support a large-catalog browsing experience.</p>
+          <p><strong>Solution:</strong> Built a shortcode-based product explorer with taxonomy-driven navigation and dynamic UI behavior.</p>
+          <p><strong>Technical Implementation:</strong> WordPress shortcodes, custom WP_Query logic, JavaScript UI updates.</p>
+          <ul>
+            <li><strong>Result:</strong> Improved product discovery</li>
+            <li><strong>Result:</strong> Better UX for large catalogs</li>
+            <li><strong>Result:</strong> More efficient browsing flow</li>
+          </ul>
+        </article>
+
+        <article class="bento-card bento-full reveal">
+          <p class="bento-label">Case Study</p>
+          <h2>3. Dynamic WordPress Shortcode Framework</h2>
+          <p><strong>Problem:</strong> Content teams needed dynamic layout blocks without editing theme templates.</p>
+          <p><strong>Solution:</strong> Developed a reusable shortcode system for dynamic content rendering across pages.</p>
+          <p><strong>Technical Implementation:</strong> WordPress shortcode architecture, custom fields and taxonomy mapping, filtered content queries.</p>
+          <ul>
+            <li><strong>Result:</strong> Dynamic display of custom fields</li>
+            <li><strong>Result:</strong> Reusable taxonomy-driven content modules</li>
+            <li><strong>Result:</strong> Faster publishing workflow for editors</li>
+          </ul>
+        </article>
+
+        <article class="bento-card bento-full bento-cta reveal">
+          <p class="bento-label">Contact</p>
+          <h2>Have a Similar WooCommerce Systems Challenge?</h2>
+          <a class="btn btn-primary" href="/contact/">Start a Project</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
