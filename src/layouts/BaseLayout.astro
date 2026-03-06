@@ -35,6 +35,16 @@ const isActive = (href: string) => {
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WL373WHRT8"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-WL373WHRT8");
+    </script>
   </head>
   <body>
     <header class="site-header">

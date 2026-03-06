@@ -74,3 +74,48 @@ if (repoList) {
       });
   }
 }
+
+const buttonSelectors = [
+  "button",
+  "input[type='button']",
+  "input[type='submit']",
+  "input[type='reset']",
+  "a.btn",
+  "[role='button']",
+].join(",");
+
+const getButtonLabel = (element) => {
+  const ariaLabel = element.getAttribute("aria-label");
+  if (ariaLabel) return ariaLabel.trim();
+
+  if (element instanceof HTMLInputElement) {
+    return (element.value || element.name || "button").trim();
+  }
+
+  const text = element.textContent;
+  if (text) return text.replace(/\s+/g, " ").trim();
+
+  return element.id || "button";
+};
+
+document.addEventListener("click", (event) => {
+  if (!(event.target instanceof Element)) return;
+
+  const clickedButton = event.target.closest(buttonSelectors);
+  if (!clickedButton) return;
+
+  if (typeof window.gtag !== "function") return;
+
+  const buttonLabel = getButtonLabel(clickedButton);
+  const href = clickedButton instanceof HTMLAnchorElement ? clickedButton.href : "";
+
+  window.gtag("event", "button_click", {
+    event_category: "engagement",
+    event_label: buttonLabel,
+    button_label: buttonLabel,
+    button_id: clickedButton.id || "",
+    button_classes: clickedButton.className || "",
+    button_url: href,
+    page_path: window.location.pathname,
+  });
+});
